@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Game of Life</title>
+
+  <link rel="stylesheet" href="/static/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <style>
+    body {
+      padding: 1em;
+    }
+
+    div.images canvas,
+    div.images img {
+      margin-right: 20px;
+      border: 1px solid gray;
+    }
+
+    div.images .hidden {
+      display: none;
+    }
+
+    div.preImages {
+      margin-top: 10px;
+    }
+
+    div.preImages pre.hidden {
+      display: none;
+    }
+
+    div.controls {
+      margin: 10px 0 10px 0;
+    }
+
+    div.controls button {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="content" class="container"></div>
+
+<script src="/static/require.min.js"></script>
+<script type="text/javascript">
+  require.config({baseUrl: '/static'});
+  require(['/static/conway.js'], function (js) {
+    js.org.jonnyzzz.lifegame.initTheGame();
+  });
+</script>
+
+</body>
+</html>
